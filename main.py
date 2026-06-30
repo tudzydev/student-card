@@ -13,14 +13,14 @@ def main():
 
 service = CardService()
 student_data = {
-    "student_id": "67123456",
-    "first_name_th": "ลิซ่ํา",
-    "last_name_th": "Blackpink",
-    "first_name_en": "Lisa",
-    "last_name_en": "Blackpink",
+    "student_id": "674259009",
+    "first_name_th": "นรงศ์ศักดิ์",
+    "last_name_th": "ภูมิประเสริฐ",
+    "first_name_en": "Narongsak",
+    "last_name_en": "Pumpasert",
     "faculty": "คณะวิทยําศําสตร์และเทคโนโลยี",
-    "photo_path": "assets/photos/lisa.jpg",
-    "gener": "female",
+    "photo_path": "assets/photos/img.jpeg",
+    "gener": "male",
 }
 
 student = service.create_student(**student_data)

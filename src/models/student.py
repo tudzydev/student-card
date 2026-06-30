@@ -23,17 +23,19 @@ class Student:
     def get_full_name_en(self) -> str:
         return  f"{self.first_name_en} {self.last_name_en}"
 
-    def get_prefix_th(self,gender) -> str:
-        if(gender == "ชาย"):
-            return "นาย"
-        else:
-            return "นางสําว"
+    def get_prefix_th(self, gender: Optional[str] = None) -> str:
+        if gender is None:
+            gender = self.gener
+        if gender and gender.lower() in ("female", "female", "หญิง", "นางสาว", "นางสําว"):
+            return "นางสาว"
+        return "นาย"
 
-    def get_prefix_en(self, gender) -> str:
-        if(gender == "male"):
-            return "Mister"
-        else:
+    def get_prefix_en(self, gender: Optional[str] = None) -> str:
+        if gender is None:
+            gender = self.gener
+        if gender and gender.lower() in ("female", "female", "woman", "girl"):
             return "Miss"
+        return "Mister"
 
     def to_dict(self) -> dict:
         return {
